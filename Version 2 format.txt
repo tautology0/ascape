@@ -1,0 +1,69 @@
+Version 2 version of database
+Header:
+5 bytes	Number of rooms
+5 bytes	Starting room
+5 bytes	Number of verbs
+5 bytes	Number of objects
+5 bytes	Maximum objects to be carried
+5 bytes	Number of flags
+5 bytes	Number of messages
+5 bytes	Number of puzzles
+
+[Object location chunk]
+byte	Object_location
+* NUMBER_OBJECTS
+
+[Object state chunk]
+byte	Object_state
+* NUMBER_OBJECTS
+
+[Score chunk]
+5 bytes	Number score objects
+5 bytes	Score/object
+1 byte	object score
+* NUMBER_SCORE_OBJECTS
+5 bytes	Number score flags
+5 bytes	Score/flag
+1 byte	flag score
+* NUMBER_SCORE_FLAGS
+
+[Verb chunk]
+String	verb
+* NUMBER_VERBS
+
+[Object name chunk]
+String	name
+* NUMBER_OBJECTS
+
+[Object noun chunk]
+String	noun
+* NUMBER_OBJECTS
+
+[Room chunk]
+String	description
+byte	North
+byte	East
+byte	West
+byte	South
+byte	Up
+byte	Down
+* NUMBER_ROOMS
+
+[Header chunk]
+String	title
+
+[Message chunk]
+string	message
+* NUMBER_MESSAGES
+
+[Object examine chunk]
+string	examine
+* NUMBER_OBJECTS
+
+[Puzzles chunk]
+10 byte	Conditions
+10 byte	Actions
+* NUMBER_PUZZLES
+
+
+
